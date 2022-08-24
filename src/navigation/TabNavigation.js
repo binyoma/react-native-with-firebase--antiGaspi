@@ -2,10 +2,9 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
-import StackNavigation from './StackNavigation';
 import Annonce from '../screens/Annonce';
 import Account from '../screens/Account';
+import Home from '../screens/Home';
 
 const Tab = createBottomTabNavigator()
 
@@ -32,7 +31,7 @@ const TabNavigation = () => {
           headerShown:false
         })}
       >
-        <Tab.Screen name="Home" component={StackNavigation} />
+        <Tab.Screen name="Home" component={Home} />
         <Tab.Screen name="Annonce" component={Annonce} />
         <Tab.Screen name="Account" component={Account} />
       </Tab.Navigator>
